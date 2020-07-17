@@ -9,7 +9,7 @@ type ClassProps = OwnProps;
 const Class = (props: ClassProps) => {
   return (
     <div>
-      <h1>You're viewing the details for course {props.classId}</h1>
+      <h1>You're viewing the details for class {props.classId}</h1>
     </div>
   );
 };
