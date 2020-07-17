@@ -5,7 +5,6 @@ const User = mongoose.model("users");
 const bcrypt = require('bcrypt');
 const LocalStrategy = require("passport-local").Strategy;
 var JwtStrategy = require('passport-jwt').Strategy;
-const ExtractJwt = require('passport-jwt').ExtractJwt;
 const config = require('./auth');
 
 module.exports = function initializePassport(passport){
@@ -43,7 +42,7 @@ module.exports = function initializePassport(passport){
     passport.use(new LocalStrategy({usernameField: 'email', session: false}, 
     authenticateUserLocal));
     passport.use(new JwtStrategy({secretOrKey: config.jwt.secret, jwtFromRequest: cookieExtractor}, (payload, done) => {
-        console.log(payload.user.displayName+" has been authenticated");
+        console.log(payload.user.name+" has been authenticated");
         return done(null, payload);
     }));
 }
