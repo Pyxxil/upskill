@@ -11,12 +11,9 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Rewards from "./pages/Rewards";
 
-import { getUser } from "./api/user";
-
 import "./App.css";
 
 const App = () => {
-  console.log(getUser().then((resp) => resp.body));
   return (
     <Router>
       <div className="custom-wrapper pure-g" id="menu">
