@@ -1,38 +1,197 @@
-.App {
+:root {
+  --primary: #f0ad6d;
+  --secondary: #ffcd8b;
+  --background-colour: #1a1423;
+  --secondary-background-colour: #3d314a;
+  --text: var(--primary);
+  --secondary-text: var(--secondary);
+  --extra: #23001e;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: var(--text);
+  background: linear-gradient(
+      135deg,
+      var(--secondary-background-colour) 21px,
+      var(--background-colour) 22px,
+      var(--background-colour) 24px,
+      transparent 24px,
+      transparent 67px,
+      var(--background-colour) 67px,
+      var(--background-colour) 69px,
+      transparent 69px
+    ),
+    linear-gradient(
+        225deg,
+        var(--secondary-background-colour) 21px,
+        var(--background-colour) 22px,
+        var(--background-colour) 24px,
+        transparent 24px,
+        transparent 67px,
+        var(--background-colour) 67px,
+        var(--background-colour) 69px,
+        transparent 69px
+      )
+      0 64px;
+  background-color: var(--secondary-background-colour);
+  background-size: 64px 128px;
+}
+
+.custom-wrapper {
+  background-color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  height: 2.5em;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+.custom-wrapper .pure-menu-heading,
+.custom-wrapper .pure-menu-link {
+  color: var(--background-colour);
+}
+
+.custom-wrapper.open {
+  height: 12.7em;
+}
+
+.custom-menu-3 {
+  text-align: right;
+}
+
+.custom-toggle {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.custom-toggle .bar {
+  background-color: var(--background-colour);
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+  position: absolute;
+  top: 1em;
+  margin-top: 0.3em;
+  margin-left: 0.5em;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.custom-toggle .bar:first-child {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.custom-toggle.x .bar {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.custom-toggle.x .bar:first-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.centered {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#menu .pure-menu-heading:focus,
+#menu .pure-menu-heading:hover,
+#menu .pure-menu-link:focus,
+#menu .pure-menu-link:hover {
+  background-color: var(--secondary-background-colour);
+  color: var(--secondary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 47.999em) {
+  .pure-menu {
+    border-bottom: 2px solid var(--background-colour);
+    text-align: left;
+  }
+  .custom-menu-3 {
+    margin-left: 1em;
+    text-align: center;
+  }
+  .custom-toggle {
+    display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 567px) {
+  .pure-g {
+    letter-spacing: normal !important;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.content-wrapper {
+  z-index: 2;
+  color: var(--text);
+  background-color: var(--background-colour);
+  line-height: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  padding: 1em 2em;
+}
+
+.content a {
+  color: var(--secondary);
+}
+
+.content ul > li {
+  padding: 1em;
+  display: block;
+  background-color: var(--secondary-background-colour);
+  margin: 1em 0;
+}
+
+.content blockquote {
+  color: var(--secondary);
+  font-style: italic;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--text);
+  margin-bottom: 1em;
+  color: var(--secondary-text);
+}
+
+article h2,
+article h3,
+article h4 {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 3px 3px -2px var(--extra);
+  -moz-box-shadow: 0 3px 3px -2px var(--extra);
+  box-shadow: 0 3px 3px -2px var(--extra);
+}
+
+.bordered {
+  border: 1px solid;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  border-radius: 0.2em;
 }
