@@ -2,16 +2,16 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Book from "./pages/Book";
-import Course from "./pages/Course";
-import Courses from "./pages/Courses";
+import Class from "./pages/Class";
+import Classes from "./pages/Classes";
 import Instructor from "./pages/Instructor";
 import Instructors from "./pages/Instructors";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Rewards from "./pages/Rewards";
 
 import "./App.css";
-import Rewards from "./pages/Rewards";
 
 const App = () => {
   return (
@@ -21,17 +21,17 @@ const App = () => {
         {/* The login page */}
         <Route path="/login" component={Login} />
 
-        {/* The page for each of the courses we offer */}
-        <Route path="/courses" component={Courses} />
-        {/* View a specific course */}
+        {/* The page for each of the classes we offer */}
+        <Route path="/classes" component={Classes} />
+        {/* View a specific class */}
         <Route
-          path="/course/:id"
-          render={(props) => <Course courseId={props.match.params.id} />}
+          path="/class/:id"
+          render={(props) => <Class classId={props.match.params.id} />}
         />
-        {/* The page where you can go to to book a course */}
+        {/* The page where you can go to to book a class */}
         <Route
-          path="/course/:id/book"
-          render={(props) => <Book courseId={props.match.params.id} />}
+          path="/class/:id/book"
+          render={(props) => <Book classId={props.match.params.id} />}
         />
 
         {/* The page for each of the instructors */}
