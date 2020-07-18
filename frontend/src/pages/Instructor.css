@@ -14,7 +14,7 @@
 
 h2 {
   color: var(--background-colour);
-  background-color: var(--text);
+  background-color: var(--secondary);
   text-align: center;
   margin: 1em 1.25em;
   padding: 1em 2em;

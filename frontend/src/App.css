@@ -109,6 +109,12 @@ body {
   transform: rotate(-45deg);
 }
 
+.custom-brand {
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: -0.25em;
+}
+
 .centered {
   text-align: center;
 }

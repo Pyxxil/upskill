@@ -125,11 +125,15 @@ interface BadgeCardProps {
 
 export const BadgeCard = (props: BadgeCardProps) => {
   return (
-    <Link to={`/company-challenge/${props.name}`} className="card content pure-u-6-24">
+    <Link to={`/company-challenge/${props.name}`} className="card pure-u-7-24">
       <div className="card-image">
-        <img src={props.image} />
+        <img src={props.image} alt="card" />
       </div>
-      <h1 className="card-title pure-u-6-24">🥇{props.name}</h1>
+      <h1 className="card-title">
+        <span role="img" aria-label="badge">
+          🥇{props.name}
+        </span>
+      </h1>
       <div className="card-content">
         <p>{props.challenge}</p>
         <p>{props.description}</p>
