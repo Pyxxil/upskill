@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  RouteComponentProps,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import Book from "./pages/Book";
 import Class from "./pages/Class";
@@ -17,12 +11,11 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Rewards from "./pages/Rewards";
-import CompanyChallenges from './pages/CompanyChallenges';
-import CompanyChallenge from './pages/CompanyChallenge';
+import CompanyChallenges from "./pages/CompanyChallenges";
+import CompanyChallenge from "./pages/CompanyChallenge";
 
 import "./App.css";
 import { fetchCurrentUser } from "./utils/userRequests";
-
 
 export type User = {
   email: string;
@@ -55,7 +48,7 @@ const App = () => {
               Upskill
             </Link>
             <a
-              href="#"
+              href="/#"
               aria-label="None"
               className="custom-toggle"
               id="toggle"
@@ -177,20 +170,25 @@ const App = () => {
         </Route>
 
         {/* This is where you can view all possible rewards */}
-        <Route path="/rewards" render={() => <Rewards user={appState.user?.name || ""}/>} />
+        <Route
+          path="/rewards"
+          render={() => <Rewards user={appState.user?.name || ""} />}
+        />
 
         {/* This is where you can view company challenges */}
         <Route path="/company-challenges" component={CompanyChallenges} />
 
         {/* View specific company challenge */}
-        <Route path="/company-challenge/:id" render={(props) => (
-          <CompanyChallenge
-            challengeId={props.match.params.id} 
-            name="Super Hard Challenge"
-            company="DEVS"
-            description="For this challenge, you need to come up with an idea in 48 hours and implement it."
+        <Route
+          path="/company-challenge/:id"
+          render={(props) => (
+            <CompanyChallenge
+              challengeId={props.match.params.id}
+              name="Super Hard Challenge"
+              company="DEVS"
+              description="For this challenge, you need to come up with an idea in 48 hours and implement it."
             />
-        )} 
+          )}
         />
       </Switch>
     </Router>

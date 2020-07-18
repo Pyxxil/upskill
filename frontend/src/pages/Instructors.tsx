@@ -3,16 +3,28 @@ import React from "react";
 import { InstructorCard } from "../components/Card";
 
 import RyanTan from "../assets/profiles/Ryan Tan.png";
-import JoshHill from "../assets/profiles/Josh Hill.jpg";
+import JoshHill from "../assets/profiles/Josh Hill.png";
 import KimberleyEvansParker from "../assets/profiles/Kimberley Evans-Parker.jpg";
 import SunnyFeng from "../assets/profiles/Sunny Feng.jpg";
 import HassaanMirza from "../assets/profiles/Hassaan Mirza.jpg";
-import TerrenceQu from "../assets/profiles/Terrence Qu.jpg";
+import TerenceQu from "../assets/profiles/Terence Qu.jpg";
 
 const Instructors = () => {
   return (
-    <div className="content-container">
-      <h1>Here's a list of our instructors</h1>
+    <>
+      <div className="content">
+        <h1
+          style={{
+            margin: "1em",
+            padding: "1em 2em",
+            textAlign: "center",
+            backgroundColor: "var(--text)",
+            color: "var(--background-colour)",
+          }}
+        >
+          Available Instructors
+        </h1>
+      </div>
       <InstructorCard
         name="Ryan Tan"
         image={RyanTan}
@@ -45,12 +57,12 @@ const Instructors = () => {
         description="I am currently a final year student at the University of Auckland in Computer Systems Engineering. I am inspired by innovation and a desire to use my skills to improve the world around me. Well developed leadership and teamwork capabilities, through group projects, workplace, competitions, and personal projects. Made several projects both within university syllabus and out. Gained experience working in a professional manner from internship as well as prior customer service jobs. "
       />
       <InstructorCard
-        name="Terrence Qu"
-        image={TerrenceQu}
+        name="Terence Qu"
+        image={TerenceQu}
         rating={3}
         description="I am a Software Engineering student, aged 19, who is interested in sharing my knowledge on various topics, chiefly in the realm of programming. I have deepened my understanding of software development through projects at both the university level and with extensive personal projects.  My strongest skills are Python, Cryptography, and C++."
       />
-    </div>
+    </>
   );
 };
 

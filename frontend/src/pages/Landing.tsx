@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Jumbotron, Button } from "reactstrap";
+import { Jumbotron } from "reactstrap";
 import { InstructorCard, ClassCard } from "../components/Card";
 import { Link } from "react-router-dom";
 
-import JoshHill from "../assets/profiles/Josh Hill.jpg";
+import JoshHill from "../assets/profiles/Josh Hill.png";
 import KimberleyEvansParker from "../assets/profiles/Kimberley Evans-Parker.jpg";
 import HassaanMirza from "../assets/profiles/Hassaan Mirza.jpg";
 import AI from "../assets/classes/AI.jpeg";
@@ -23,16 +23,17 @@ const Landing = () => {
         </h1>
       </Jumbotron>
       <div className="pure-g">
-        <div className="pure-u-1-1 featured-instructors">
-          <div className="content-container featured-container">
+        <div className="pure-u-1 featured-instructors">
+          <div className="featured-container pure-u-1">
             <h2>Featured Instructors</h2>
             <Link to={"/instructors"}>
-              <Button className="button">More Instructors</Button>
+              <button className="pure-button">More Instructors</button>
             </Link>
-            <div className="card-container">
+            <div className="card-container pure-u-1">
               <img
-                className="size size-left"
+                className="size pure-u-1-24"
                 src={require("../assets/left.png")}
+                alt="left arrow"
               />
               <InstructorCard
                 name="Hassaan Mirza"
@@ -53,20 +54,25 @@ const Landing = () => {
                 description="I am a problem solver that loves to program. This has lead to a deep interest in robotics and a passion for coding and algorithms. I also enjoy design and I am good at coming up with creative solutions and work well in a team.
           I'm currently doing Computer Systems Engineering, conjoint with Science; Logic and Computation. During this I'm learning a range of programming languages, as well as logic, mathematics, proofs and electrical systems."
               />
-              <img className="size" src={require("../assets/right.png")} />
+              <img
+                className="size pure-u-1-24"
+                src={require("../assets/right.png")}
+                alt="right arrow"
+              />
             </div>
           </div>
         </div>
-        <div className="pure-u-1-1 featured-classes">
-          <div className=" content-container featured-container">
+        <div className="pure-u-1 featured-classes">
+          <div className="featured-container pure-u-1">
             <h2>Featured Classes</h2>
             <Link to={"/classes"}>
-              <Button className="button">More Classes</Button>
+              <button className="pure-button">More Classes</button>
             </Link>
             <div className="card-container">
               <img
-                className="size size-left"
+                className="size pure-u-1-24"
                 src={require("../assets/left.png")}
+                alt="left arrow"
               />
               <ClassCard
                 name="Blockchain"
@@ -80,7 +86,7 @@ const Landing = () => {
                 instructor="Josh Hill"
                 image={binary}
                 cost={25}
-                description="An introduction to binary and how it is used in a computer. 
+                description="An introduction to binary and how it is used in a computer.
                   You'll learn how there are 10 kinds of people in this world; those who understand binary, those who don't, and those who fall prey to off by one errors."
               />
               <ClassCard
@@ -88,10 +94,14 @@ const Landing = () => {
                 instructor="Sunny Feng"
                 image={AI}
                 cost={30}
-                description="Learn the powers and dangers of AI and where it can take you. 
+                description="Learn the powers and dangers of AI and where it can take you.
                   Additionally, this classcovers opportunities for AI, as well as ethical concerns surounding AI.  "
               />
-              <img className="size" src={require("../assets/right.png")} />
+              <img
+                className="size pure-u-1-24"
+                src={require("../assets/right.png")}
+                alt="right arrow"
+              />
             </div>
           </div>
         </div>
