@@ -1,11 +1,11 @@
 import React from "react";
 import { RewardCard } from "../components/Card";
-import testImage from "../assets/test.webp";
-import who from "../assets/rewards/who.svg"
+
+import who from "../assets/rewards/who.svg";
 import unicef from "../assets/rewards/unicef-logo.png";
 import spca from "../assets/rewards/spca.svg";
 import kiwicoffee from "../assets/rewards/kiwicoffee.jpg";
-import gridakl from "../assets/rewards/gridakl.JPG";
+import gridakl from "../assets/rewards/gridakl.jpg";
 import coach from "../assets/rewards/coach.jpg";
 
 interface OwnProps {
@@ -18,8 +18,11 @@ const Rewards = (props: RewardsProps) => {
   return (
     <div>
       <h1>Rewards</h1>
-  <p>Hi {props.user}, you currently have 5&#128176;</p>
-      <p>Choose to donate to a charity or get a voucher you can spend at a local business!</p>
+      <p>Hi {props.user}, you currently have 5&#128176;</p>
+      <p>
+        Choose to donate to a charity or get a voucher you can spend at a local
+        business!
+      </p>
       <h2>Charities</h2>
       <RewardCard
         name="COVID-19 Fund"
@@ -64,7 +67,6 @@ const Rewards = (props: RewardsProps) => {
         address="Online"
         description="We'll introduce to a local career coach, who will provide you with a free 30 minute zoom coaching session!"
       ></RewardCard>
-
     </div>
   );
 };
