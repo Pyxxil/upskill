@@ -1,15 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface OwnProps {
-  classId: number;
+  name: String;
+  instructor: String;
+  price: number;
+  description: String;
 }
 
 type ClassProps = OwnProps;
 
 const Class = (props: ClassProps) => {
   return (
-    <div>
-      <h1>You're viewing the details for class {props.classId}</h1>
+    <div className="content">
+      <h1>{props.name}</h1>
+
+      <p>Taught by {props.instructor}</p>
+
+      <p>Price: ${props.price}</p>
+
+      <Link to={`/book/${props.name}`}>Book Now!</Link>
+
+      <p>{props.description}</p>
     </div>
   );
 };

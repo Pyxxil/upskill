@@ -78,11 +78,18 @@ const App = () => {
         {/* View a specific class */}
         <Route
           path="/class/:id"
-          render={(props) => <Class classId={props.match.params.id} />}
+          render={(props) => (
+            <Class
+              name={props.match.params.id}
+              instructor="John Smith"
+              price={20}
+              description="This class introduces the basics of Blockchain"
+            />
+          )}
         />
         {/* The page where you can go to to book a class */}
         <Route
-          path="/class/:id/book"
+          path="/book/:id"
           render={(props) => <Book classId={props.match.params.id} />}
         />
 
