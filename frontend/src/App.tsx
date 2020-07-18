@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import Book from "./pages/Book";
@@ -14,7 +14,20 @@ import Rewards from "./pages/Rewards";
 
 import "./App.css";
 
+export type User = {
+  email: string,
+  name: string,
+  password: string
+}
+
+interface IState {
+  user?: User | null | undefined
+}
+
 const App = () => {
+  let initialState: IState = {user: null};
+  const [appState, setUser] = useState(initialState);
+
   return (
     <Router>
       <div className="custom-wrapper pure-g" id="menu">
@@ -77,10 +90,14 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Landing} />
         {/* The login page */}
-        <Route path="/login" component={Login} />
+        <Route path="/login">
+          <Login user={appState.user} setUser={setUser}></Login>
+        </Route>
 
         {/* The register page */}
-        <Route path="/register" component={Register}/>
+        <Route path="/register">
+          <Register user={appState.user} setUser={setUser}></Register>
+        </Route>
 
         {/* The page for each of the classes we offer */}
         <Route path="/classes" component={Classes} />
