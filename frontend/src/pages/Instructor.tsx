@@ -23,7 +23,7 @@ const Instructor = (props: InstructorProps) => {
   return (
     <div className="instructor-container">
       <img
-        src={require("../assets/John Smith.jpg")}
+        src={require("../assets/profiles/John Smith.jpg")}
         alt={props.name}
         className="profile"
       />
