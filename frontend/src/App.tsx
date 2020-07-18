@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch, Link, RouteComponentProps } from "react-router-dom";
 
 import Book from "./pages/Book";
 import Class from "./pages/Class";
@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 import Rewards from "./pages/Rewards";
 
 import "./App.css";
+import { fetchCurrentUser } from './utils/userRequests';
 
 export type User = {
   email: string,
@@ -25,8 +26,16 @@ interface IState {
 }
 
 const App = () => {
-  let initialState: IState = {user: null};
-  const [appState, setUser] = useState(initialState);
+  let initialState: IState = { user: null };
+  const [appState, setAppState] = useState(initialState);
+  console.log(appState);
+
+  // Try to fetch the user only once
+  useEffect(()=>{
+    fetchCurrentUser().then((res)=>{
+      setAppState({user: res.data.user})
+    });
+  }, []);
 
   return (
     <Router>
@@ -71,18 +80,27 @@ const App = () => {
         </div>
         <div className="pure-u-1 pure-u-md-6-24">
           <div className="pure-menu pure-menu-horizontal custom-menu-3">
-            <ul className="pure-menu-list">
-              <li className="pure-menu-item">
-                <Link to="/register" className="pure-menu-link">
-                  Register
+            {appState.user ?
+              <ul className="pure-menu-list">
+                <li className="pure-menu-item">
+                  <Link to="/profile" className="pure-menu-link">
+                    {appState.user.name}
+                  </Link>
+                </li>
+              </ul> :
+              <ul className="pure-menu-list">
+                <li className="pure-menu-item">
+                  <Link to="/register" className="pure-menu-link">
+                    Register
+                  </Link>
+                </li>
+                <li className="pure-menu-item">
+                  <Link to="/login" className="pure-menu-link">
+                    Login
                 </Link>
-              </li>
-              <li className="pure-menu-item">
-                <Link to="/login" className="pure-menu-link">
-                  Login
-                </Link>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            }
           </div>
         </div>
       </div>
@@ -91,12 +109,12 @@ const App = () => {
         <Route exact path="/" component={Landing} />
         {/* The login page */}
         <Route path="/login">
-          <Login user={appState.user} setUser={setUser}></Login>
+          <Login user={appState.user} setAppState={setAppState}></Login>
         </Route>
 
         {/* The register page */}
         <Route path="/register">
-          <Register user={appState.user} setUser={setUser}></Register>
+          <Register user={appState.user} setAppState={setAppState}></Register>
         </Route>
 
         {/* The page for each of the classes we offer */}
@@ -123,7 +141,9 @@ const App = () => {
         />
 
         {/* This will certainly need to change, it's meant to be a page for looking at your own profile */}
-        <Route path="/profile" component={Profile} />
+        <Route path="/profile" component={Profile}>
+          <Profile user={appState.user} setAppState={setAppState}/>
+        </Route>
 
         {/* This is where you can view all possible rewards */}
         <Route path="/rewards" component={Rewards} />

@@ -1,9 +1,12 @@
 import React, { FormEvent } from "react";
 import { User } from "../App";
+import { registerUser, loginUser } from "../utils/userRequests";
+import { AxiosError } from 'axios';
+import { RouteComponentProps, withRouter, Redirect } from "react-router-dom";
 
-interface IProps {
+interface IProps extends RouteComponentProps<any> {
     user: User | null | undefined,
-    setUser: Function
+    setAppState: Function
 }
 
 interface IState {
@@ -55,9 +58,15 @@ class Register extends React.Component<IProps, IState> {
      */
     handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        if(this.validateClientSide()){
+        if (this.validateClientSide()) {
             console.log("Submitting form ");
             console.log(this.state);
+            registerUser(this.state.name, this.state.email, this.state.password).then((res) => {
+                this.props.setAppState({ user: res.data.user });
+                this.props.history.push("/profile");
+            }).catch((err: AxiosError) => {
+                this.setState({ error: [err.name + ", " + err.message] })
+            });
         }
     }
 
@@ -108,6 +117,10 @@ class Register extends React.Component<IProps, IState> {
     }
 
     render() {
+        // Redirect if there exists logged in user
+        if (this.props.user) {
+            return <Redirect to="/" />
+        }
         return (
             <div>
                 <h1>Please login</h1>
@@ -125,9 +138,9 @@ class Register extends React.Component<IProps, IState> {
                     <label htmlFor="email">Email</label>
                     <input type="text" id="email" name="email" onChange={this.handleChangeEmail.bind(this)} value={this.state.email} /><br />
                     <label htmlFor="password">Password</label>
-                    <input type="text" id="password" name="password" onChange={this.handleChangePassword.bind(this)} value={this.state.password} /><br />
+                    <input type="password" id="password" name="password" onChange={this.handleChangePassword.bind(this)} value={this.state.password} /><br />
                     <label htmlFor="passwordConfirm">Confirm Password</label>
-                    <input type="text" id="passwordConfirm" name="passwordConfirm" onChange={this.handleChangePasswordConfirm.bind(this)} value={this.state.passwordConfirm} /><br />
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" onChange={this.handleChangePasswordConfirm.bind(this)} value={this.state.passwordConfirm} /><br />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
@@ -135,4 +148,4 @@ class Register extends React.Component<IProps, IState> {
     }
 };
 
-export default Register;
+export default withRouter(Register);
