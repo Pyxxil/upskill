@@ -4,7 +4,9 @@ import { Jumbotron, Button } from "reactstrap";
 import { InstructorCard, ClassCard } from "../components/Card";
 import { Link } from "react-router-dom";
 
-import testImage from "../assets/test.webp";
+import JoshHill from "../assets/profiles/Josh Hill.jpg";
+import KimberleyEvansParker from "../assets/profiles/Kimberley Evans-Parker.jpg";
+import HassaanMirza from "../assets/profiles/Hassaan Mirza.jpg";
 import AI from "../assets/classes/AI.jpeg";
 import binary from "../assets/classes/binary.jpg";
 import blockchain from "../assets/classes/Blockchain.jpeg";
@@ -30,22 +32,23 @@ const Landing = () => {
             <div className="card-container">
               <img className="size" src={require("../assets/left.png")} />
               <InstructorCard
-                name="John Smith"
-                image={testImage}
+                name="Hassaan Mirza"
+                image={HassaanMirza}
                 rating={3}
-                description="I am John Smith"
+                description="I am currently a final year student at the University of Auckland in Computer Systems Engineering. I am inspired by innovation and a desire to use my skills to improve the world around me. Well developed leadership and teamwork capabilities, through group projects, workplace, competitions, and personal projects. Made several projects both within university syllabus and out. Gained experience working in a professional manner from internship as well as prior customer service jobs. "
               />
               <InstructorCard
-                name="John Smith"
-                image={testImage}
-                rating={3}
-                description="I am John Smith"
+                name="Josh Hill"
+                image={JoshHill}
+                rating={5}
+                description="I am a problem solver by nature, and programming is the main tool with which I solve problems. I am passionate about designing creative, and efficient, solutions to problems with code. "
               />
               <InstructorCard
-                name="John Smith"
-                image={testImage}
-                rating={3}
-                description="I am John Smith"
+                name="Kimberley Evans-Parker"
+                image={KimberleyEvansParker}
+                rating={4}
+                description="I am a problem solver that loves to program. This has lead to a deep interest in robotics and a passion for coding and algorithms. I also enjoy design and I am good at coming up with creative solutions and work well in a team.
+          I'm currently doing Computer Systems Engineering, conjoint with Science; Logic and Computation. During this I'm learning a range of programming languages, as well as logic, mathematics, proofs and electrical systems."
               />
               <img className="size" src={require("../assets/right.png")} />
             </div>
