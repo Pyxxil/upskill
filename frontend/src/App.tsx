@@ -92,7 +92,16 @@ const App = () => {
         <Route
           path="/instructor/:id"
           render={(props) => (
-            <Instructor instructorId={props.match.params.id} />
+            <Instructor
+              instructorId={props.match.params.id}
+              name="John Smith"
+              stars={4.5}
+              description="I am a doctor that teaches Physics, Physics, Physics, Physics, Physics, Physics, Physics, Physics, Physics, Physics, Physics.  \n
+              This is one corner… of one country, in one continent, on one planet that’s a corner of a galaxy that’s a corner of a universe that is forever growing and shrinking and creating and destroying and never remaining the same for a single millisecond. And there is so much, so much to see.\n
+              The world is vast and there's so much to explore, so much to see and so much to learn...\n
+              Where do you want to start?"
+              image="../assets/John Smith.jpg"
+            />
           )}
         />
 

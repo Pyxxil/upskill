@@ -12,6 +12,7 @@
     "start": "concurrently \"yarn run backend\" \"yarn run frontend\""
   },
   "dependencies": {
+    "@types/react-star-rating-component": "^1.4.0",
     "concurrently": "^5.2.0"
   },
   "devDependencies": {
