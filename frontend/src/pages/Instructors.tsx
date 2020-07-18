@@ -11,7 +11,7 @@ import TerrenceQu from "../assets/profiles/Terrence Qu.jpg";
 
 const Instructors = () => {
   return (
-    <div>
+    <div className="content-container">
       <h1>Here's a list of our instructors</h1>
       <InstructorCard
         name="Ryan Tan"
@@ -26,7 +26,7 @@ const Instructors = () => {
         description="I am a problem solver by nature, and programming is the main tool with which I solve problems. I am passionate about designing creative, and efficient, solutions to problems with code. "
       />
       <InstructorCard
-        name="Kimberley Evans-Parker"
+        name="Kimberley E-P"
         image={KimberleyEvansParker}
         rating={4}
         description="I am a problem solver that loves to program. This has lead to a deep interest in robotics and a passion for coding and algorithms. I also enjoy design and I am good at coming up with creative solutions and work well in a team.
@@ -48,7 +48,7 @@ const Instructors = () => {
         name="Terrence Qu"
         image={TerrenceQu}
         rating={3}
-        description=""
+        description="I am a Software Engineering student, aged 19, who is interested in sharing my knowledge on various topics, chiefly in the realm of programming. I have deepened my understanding of software development through projects at both the university level and with extensive personal projects.  My strongest skills are Python, Cryptography, and C++."
       />
     </div>
   );

@@ -12,31 +12,14 @@ body {
   font-size: 16px;
   line-height: 1.5em;
   color: var(--text);
-  /* background: linear-gradient(
-      135deg,
-      var(--secondary-background-colour) 21px,
-      var(--background-colour) 22px,
-      var(--background-colour) 24px,
-      transparent 24px,
-      transparent 67px,
-      var(--background-colour) 67px,
-      var(--background-colour) 69px,
-      transparent 69px
-    ),
-    linear-gradient(
-        225deg,
-        var(--secondary-background-colour) 21px,
-        var(--background-colour) 22px,
-        var(--background-colour) 24px,
-        transparent 24px,
-        transparent 67px,
-        var(--background-colour) 67px,
-        var(--background-colour) 69px,
-        transparent 69px
-      )
-      0 64px;
-  background-color: var(--secondary-background-colour); */
   background-size: 64px 128px;
+}
+
+.content-container {
+  width: 90vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .custom-wrapper {

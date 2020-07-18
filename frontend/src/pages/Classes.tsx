@@ -14,7 +14,7 @@ import neuralNetworks from "../assets/classes/rainbow brain.jpeg";
 
 const Classes = () => {
   return (
-    <div>
+    <div className="content-container">
       <h1>Here's a list of our classes</h1>
       <ClassCard
         name="Blockchain"

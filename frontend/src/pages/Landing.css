@@ -1,73 +1,76 @@
 .jumbotron {
-    background-image: url('../assets/jumbotron.jpg');
-    background-size: cover;
-    min-height: 30em;
+  background-image: url("../assets/jumbotron.jpg");
+  background-size: cover;
+  min-height: 30em;
 }
 
 .jumbotron h1 {
-    font-size: 3em;
-    line-height: 1em;
-    color: #ffffff;
-    margin: 0em 0em;
-    padding: 5em 5em;
-    border-bottom: none;
-    text-shadow: 2px 2px #000000;
+  font-size: 3em;
+  line-height: 1em;
+  color: #ffffff;
+  margin: 0em 0em;
+  padding: 5em 5em;
+  border-bottom: none;
+  text-shadow: 2px 2px #000000;
 }
 
 .featured-container {
-    min-height: 30em;
-    width: 90vw;
-    max-width: 1100px;
-    margin: auto auto;
+  min-height: 30em;
+  margin: auto auto;
 }
 
 .featured-container h2 {
-    display: inline;
-    line-height: 4em;
-    margin-left: 2.6em;
-    color: #000000;
+  display: inline;
+  line-height: 4em;
+  margin-left: 2.6em;
+  color: #000000;
 }
 
 .card-container {
-    text-align: center;
+  text-align: center;
 }
 
 .size {
-    margin-top: 10em;
-    width: 2.5em;
-    border-radius: 50px;
-    opacity: 0.8;
+  margin-top: 10em;
+  width: 2.5em;
+  border-radius: 50px;
+  opacity: 0.8;
+  margin-right: -20px;
 }
 .size:hover {
-    transform: scale(1.1, 1.1);
-    cursor: pointer;
-    opacity: 1;
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+  opacity: 1;
+}
+.size-left {
+  margin-right: 20px;
+  margin-left: -0px;
 }
 
 .featured-instructors {
-    background-color: aqua;
-    width: 100%;
+  background-color: aqua;
+  width: 100%;
 }
 
 .featured-classes {
-    background-color: blue;
-    width: 100%;
+  background-color: blue;
+  width: 100%;
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 0.5em 0.5em;
-    float: right;
-    margin-top: 2em;
-    margin-right: 3.5em;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.5em 0.5em;
+  float: right;
+  margin-top: 2em;
+  margin-right: 3.5em;
 }
 
 .button:hover {
-    transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }

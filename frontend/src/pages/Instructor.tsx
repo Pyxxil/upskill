@@ -1,10 +1,10 @@
 import React from "react";
-import JohnSmith from "../assets/John Smith.jpg";
 import "./Instructor.css";
 import { ClassCard } from "../components/Card";
 
 import StarRatingComponent from "react-star-rating-component";
 
+import RyanTan from "../assets/profiles/Ryan Tan 2.png";
 import binary from "../assets/classes/binary.jpg";
 import blockchain from "../assets/classes/Blockchain.jpeg";
 import networking from "../assets/classes/networking.jpg";
@@ -17,23 +17,14 @@ interface OwnProps {
   name: string;
   stars: number;
   description: string;
-  image: string;
 }
 
 type InstructorProps = OwnProps;
 
 const Instructor = (props: InstructorProps) => {
-  console.log(props.image === "../assets/John Smith.jpg");
-  console.log(props.image);
   return (
-    <div className="instructor-container">
-      <img
-        src={require("../assets/profiles/John Smith.jpg")}
-        alt={props.name}
-        className="profile"
-      />
-      {/* <img src={require(props.image)} alt={props.name} /> */}
-      {/* <img src={JohnSmith} alt={props.name} /> */}
+    <div className="content-container instructor-container">
+      <img src={RyanTan} alt={props.name} className="profile" />
       <h1 className="instructor-heading">{props.name}</h1>
       <StarRatingComponent
         name={"rating"}
@@ -94,7 +85,6 @@ const Instructor = (props: InstructorProps) => {
         description="Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. 
           Many think it is the best way to make progress towards human-level AI."
       />
-      <p>You're viewing the page for instructor {props.instructorId}</p>
     </div>
   );
 };

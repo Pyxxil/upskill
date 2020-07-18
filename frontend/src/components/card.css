@@ -2,8 +2,10 @@
   color: var(--background-colour);
   background-color: var(--text);
   height: 20em;
-  margin: 1em 2em;
-  padding: 0 0 1em !important;
+  width: 28%;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  padding: 0 0 0em !important;
   -webkit-box-shadow: 0.5em 0.5em 5px 0px var(--extra);
   -moz-box-shadow: 0.5em 0.5em 5px 0px var(--extra);
   box-shadow: 0.5em 0.5em 5px 0px var(--extra);

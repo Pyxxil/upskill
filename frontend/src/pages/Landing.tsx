@@ -24,13 +24,16 @@ const Landing = () => {
       </Jumbotron>
       <div className="pure-g">
         <div className="pure-u-1-1 featured-instructors">
-          <div className="featured-container">
+          <div className="content-container featured-container">
             <h2>Featured Instructors</h2>
             <Link to={"/instructors"}>
               <Button className="button">More Instructors</Button>
             </Link>
             <div className="card-container">
-              <img className="size" src={require("../assets/left.png")} />
+              <img
+                className="size size-left"
+                src={require("../assets/left.png")}
+              />
               <InstructorCard
                 name="Hassaan Mirza"
                 image={HassaanMirza}
@@ -44,7 +47,7 @@ const Landing = () => {
                 description="I am a problem solver by nature, and programming is the main tool with which I solve problems. I am passionate about designing creative, and efficient, solutions to problems with code. "
               />
               <InstructorCard
-                name="Kimberley Evans-Parker"
+                name="Kimberley E-P"
                 image={KimberleyEvansParker}
                 rating={4}
                 description="I am a problem solver that loves to program. This has lead to a deep interest in robotics and a passion for coding and algorithms. I also enjoy design and I am good at coming up with creative solutions and work well in a team.
@@ -55,13 +58,16 @@ const Landing = () => {
           </div>
         </div>
         <div className="pure-u-1-1 featured-classes">
-          <div className="featured-container">
+          <div className=" content-container featured-container">
             <h2>Featured Classes</h2>
             <Link to={"/classes"}>
               <Button className="button">More Classes</Button>
             </Link>
             <div className="card-container">
-              <img className="size" src={require("../assets/left.png")} />
+              <img
+                className="size size-left"
+                src={require("../assets/left.png")}
+              />
               <ClassCard
                 name="Blockchain"
                 instructor="Ryan Tan"
