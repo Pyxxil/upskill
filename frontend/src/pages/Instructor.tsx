@@ -1,6 +1,6 @@
 import React from "react";
 import "./Instructor.css";
-import { ClassCard } from "../components/Card";
+import { ClassCard, BadgeCard } from "../components/Card";
 
 import StarRatingComponent from "react-star-rating-component";
 
@@ -11,6 +11,8 @@ import networking from "../assets/classes/networking.jpg";
 import purpleComputer from "../assets/classes/purple comp.jpg";
 import idea from "../assets/classes/idea.jpg";
 import neuralNetworks from "../assets/classes/rainbow brain.jpeg";
+import centrality from "../assets/centrality.jpg";
+import devs from "../assets/devs.png";
 
 interface OwnProps {
   instructorId: number;
@@ -89,8 +91,24 @@ const Instructor = (props: InstructorProps) => {
           cost={27.5}
           description="Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.
           Many think it is the best way to make progress towards human-level AI."
-        />
-      </div>
+      />
+      <h2>Badges</h2>
+      <BadgeCard
+        name="First Place!"
+        image={centrality}
+        challenge="Super Hard Challenge"
+        description="Got first place out of everyone!"
+      />
+      <BadgeCard
+        name="Participation"
+        image={devs}
+        challenge="48 Hour Hackathon"
+        description="Got first place out of everyone!"
+      />
+      <h2>Endorsements</h2>
+      <p>"One of my best students." - David Tennant 19/07/2020</p>
+      <p>"Completely unbelievable! Once of the best teachers I've seen, explains things really well" - Terence Qu</p>
+    </div>
     </>
   );
 };

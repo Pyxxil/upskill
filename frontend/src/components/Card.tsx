@@ -115,3 +115,26 @@ export const ChallengeCard = (props: ChallengeCardProps) => {
     </Link>
   );
 };
+
+interface BadgeCardProps {
+  name: String;
+  image: string;
+  challenge: string;
+  description: string;
+}
+
+export const BadgeCard = (props: BadgeCardProps) => {
+  return (
+    <Link to={`/company-challenge/${props.name}`} className="card content pure-u-6-24">
+      <div className="card-image">
+        <img src={props.image} />
+      </div>
+      <h1 className="card-title pure-u-6-24">🥇{props.name}</h1>
+      <div className="card-content">
+        <p>{props.challenge}</p>
+        <p>{props.description}</p>
+        <p></p>
+      </div>
+    </Link>
+  );
+};
