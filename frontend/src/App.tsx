@@ -11,9 +11,12 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Rewards from "./pages/Rewards";
+import CompanyChallenges from './pages/CompanyChallenges';
+import CompanyChallenge from './pages/CompanyChallenge';
 
 import "./App.css";
 import { fetchCurrentUser } from './utils/userRequests';
+
 
 export type User = {
   email: string,
@@ -31,9 +34,9 @@ const App = () => {
   console.log(appState);
 
   // Try to fetch the user only once
-  useEffect(()=>{
-    fetchCurrentUser().then((res)=>{
-      setAppState({user: res.data.user})
+  useEffect(() => {
+    fetchCurrentUser().then((res) => {
+      setAppState({ user: res.data.user })
     });
   }, []);
 
@@ -73,6 +76,11 @@ const App = () => {
               <li className="pure-menu-item">
                 <Link to="/rewards" className="pure-menu-link">
                   Rewards
+                </Link>
+              </li>
+              <li className="pure-menu-item">
+                <Link to="/company-challenges" className="pure-menu-link">
+                  Company Challenges
                 </Link>
               </li>
             </ul>
@@ -158,11 +166,25 @@ const App = () => {
 
         {/* This will certainly need to change, it's meant to be a page for looking at your own profile */}
         <Route path="/profile" component={Profile}>
-          <Profile user={appState.user} setAppState={setAppState}/>
+          <Profile user={appState.user} setAppState={setAppState} />
         </Route>
 
         {/* This is where you can view all possible rewards */}
         <Route path="/rewards" component={Rewards} />
+
+        {/* This is where you can view company challenges */}
+        <Route path="/company-challenges" component={CompanyChallenges} />
+
+        {/* View specific company challenge */}
+        <Route path="/company-challenge/:id" render={(props) => (
+          <CompanyChallenge
+            challengeId={props.match.params.id} 
+            name="Super Hard Challenge"
+            company="DEVS"
+            description="For this challenge, you need to come up with an idea in 48 hours and implement it."
+            />
+        )} 
+        />
       </Switch>
     </Router>
   );
