@@ -170,7 +170,7 @@ const App = () => {
         </Route>
 
         {/* This is where you can view all possible rewards */}
-        <Route path="/rewards" component={Rewards} />
+        <Route path="/rewards" render={() => <Rewards user={appState.user?.name || ""}/>} />
 
         {/* This is where you can view company challenges */}
         <Route path="/company-challenges" component={CompanyChallenges} />
