@@ -1,6 +1,7 @@
 import React from "react";
 
 import Stars from "./Stars";
+import StarRatingComponent from "react-star-rating-component";
 
 import "./card.css";
 import { Link } from "react-router-dom";
@@ -24,7 +25,12 @@ export const InstructorCard = (props: InstructorCardProps) => {
       </div>
       <div className="card-content">
         <h1>{props.name}</h1>
-        <Stars value={props.rating} />
+        {/* <Stars value={props.rating} /> */}
+        <StarRatingComponent
+          name={"rating"}
+          value={props.rating}
+          editing={false}
+        />
         <p>{props.description}</p>
       </div>
     </Link>

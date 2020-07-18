@@ -1,6 +1,6 @@
 :root {
-  --primary: #f0ad6d;
-  --secondary: #ffcd8b;
+  --primary: #a84ed1;
+  --secondary: #48005e;
   --background-colour: #1a1423;
   --secondary-background-colour: #3d314a;
   --text: var(--primary);
@@ -12,7 +12,7 @@ body {
   font-size: 16px;
   line-height: 1.5em;
   color: var(--text);
-  background: linear-gradient(
+  /* background: linear-gradient(
       135deg,
       var(--secondary-background-colour) 21px,
       var(--background-colour) 22px,
@@ -35,7 +35,7 @@ body {
         transparent 69px
       )
       0 64px;
-  background-color: var(--secondary-background-colour);
+  background-color: var(--secondary-background-colour); */
   background-size: 64px 128px;
 }
 
@@ -169,11 +169,11 @@ body {
 }
 
 h1 {
-  text-align: center;
+  /* text-align: center;
   padding-bottom: 1em;
   border-bottom: 2px solid var(--text);
   margin-bottom: 1em;
-  color: var(--secondary-text);
+  color: var(--secondary-text); */
 }
 
 article h2,
