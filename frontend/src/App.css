@@ -15,6 +15,13 @@ body {
   background-size: 64px 128px;
 }
 
+.content-container {
+  width: 90vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
 .custom-wrapper {
   background-color: var(--text);
   -webkit-font-smoothing: antialiased;

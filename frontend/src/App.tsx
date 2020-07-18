@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch, Link, RouteComponentProps } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  RouteComponentProps,
+} from "react-router-dom";
 
 import Book from "./pages/Book";
 import Class from "./pages/Class";
@@ -15,17 +21,17 @@ import CompanyChallenges from './pages/CompanyChallenges';
 import CompanyChallenge from './pages/CompanyChallenge';
 
 import "./App.css";
-import { fetchCurrentUser } from './utils/userRequests';
+import { fetchCurrentUser } from "./utils/userRequests";
 
 
 export type User = {
-  email: string,
-  name: string,
-  password: string
-}
+  email: string;
+  name: string;
+  password: string;
+};
 
 interface IState {
-  user?: User | null | undefined
+  user?: User | null | undefined;
 }
 
 const App = () => {
@@ -36,7 +42,7 @@ const App = () => {
   // Try to fetch the user only once
   useEffect(() => {
     fetchCurrentUser().then((res) => {
-      setAppState({ user: res.data.user })
+      setAppState({ user: res.data.user });
     });
   }, []);
 
@@ -88,14 +94,15 @@ const App = () => {
         </div>
         <div className="pure-u-1 pure-u-md-6-24">
           <div className="pure-menu pure-menu-horizontal custom-menu-3">
-            {appState.user ?
+            {appState.user ? (
               <ul className="pure-menu-list">
                 <li className="pure-menu-item">
                   <Link to="/profile" className="pure-menu-link">
                     {appState.user.name}
                   </Link>
                 </li>
-              </ul> :
+              </ul>
+            ) : (
               <ul className="pure-menu-list">
                 <li className="pure-menu-item">
                   <Link to="/register" className="pure-menu-link">
@@ -105,10 +112,10 @@ const App = () => {
                 <li className="pure-menu-item">
                   <Link to="/login" className="pure-menu-link">
                     Login
-                </Link>
+                  </Link>
                 </li>
               </ul>
-            }
+            )}
           </div>
         </div>
       </div>
@@ -153,13 +160,13 @@ const App = () => {
           render={(props) => (
             <Instructor
               instructorId={props.match.params.id}
-              name="John Smith"
-              stars={4.5}
-              description="I am a doctor that teaches Physics, Physics, Physics, Physics, Physics, Physics, Physics, Physics, Physics, Physics, Physics.  \n
-              This is one corner… of one country, in one continent, on one planet that’s a corner of a galaxy that’s a corner of a universe that is forever growing and shrinking and creating and destroying and never remaining the same for a single millisecond. And there is so much, so much to see.\n
-              The world is vast and there's so much to explore, so much to see and so much to learn...\n
-              Where do you want to start?"
-              image="../assets/John Smith.jpg"
+              name="Ryan Tan"
+              stars={4}
+              description="As a newcomer in computer science and programming, I try to learn about the domain as much as I can to make up for lost time. The following quote inspired me to learn, grow and fail quickly - 'It's hard to achieve greatness by constantly looking back. It's constant forward hyper momentum' - Robert Herjavec.
+              \nHi! I'm Ryan Tan and thank you for visiting my LinkedIn page. I'm currently a student studying at the University of Auckland, and I'm in my penultimate year, working towards my Bachelor of Science (Hons) in Computer Science. I am an aspiring Software Engineer/Developer, that enjoys the problem solving, collaboration and critical thinking aspect of building software. Ever since writing my first line in Python, and getting it to print what my lecturer told me to, I've been fascinated by the boundaries of what computers/software can do. I then spent the last two years learning about how humans interact with software, how computers provide an opportunity to help improve our daily lives, and the potential harms of bad software design.
+              \nOutside programming, I'm currently writing on Medium, and I aim to write guides, articles about new technologies and also my personal experiences. I'd love the opportunity to collaborate with others in writing guides, so if you have a topic you'd like to work on together with me, send me an email! Link to Medium: https://medium.com/@rtan265.
+              \nMy current goal is seeking industry experience. I am actively searching for a software engineering internship role for this upcoming summer (2020/2021) to showcase the skills I've learnt over the last two years. Please get in touch with me at rtan265@gmail.com. I look forward to hearing from you!
+              \nSkills/Interests: Python, C++, C#, JavaScript, HTML/CSS, ReactJs, Git, Java. "
             />
           )}
         />
