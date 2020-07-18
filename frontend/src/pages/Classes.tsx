@@ -14,8 +14,20 @@ import neuralNetworks from "../assets/classes/rainbow brain.jpeg";
 
 const Classes = () => {
   return (
-    <div className="content-container">
-      <h1>Here's a list of our classes</h1>
+    <>
+      <div className="content">
+        <h1
+          style={{
+            margin: "1em",
+            padding: "1em 2em",
+            textAlign: "center",
+            backgroundColor: "var(--text)",
+            color: "var(--background-colour)",
+          }}
+        >
+          Available Classes
+        </h1>
+      </div>
       <ClassCard
         name="Blockchain"
         instructor="Ryan Tan"
@@ -28,7 +40,7 @@ const Classes = () => {
         instructor="Josh Hill"
         image={binary}
         cost={25}
-        description="An introduction to binary and how it is used in a computer. 
+        description="An introduction to binary and how it is used in a computer.
           You'll learn how there are 10 kinds of people in this world; those who understand binary, those who don't, and those who fall prey to off by one errors."
       />
       <ClassCard
@@ -36,7 +48,7 @@ const Classes = () => {
         instructor="Sunny Feng"
         image={AI}
         cost={30}
-        description="Learn the powers and dangers of AI and where it can take you. 
+        description="Learn the powers and dangers of AI and where it can take you.
         Additionally, this classcovers opportunities for AI, as well as ethical concerns surounding AI.  "
       />
       <ClassCard
@@ -44,7 +56,7 @@ const Classes = () => {
         instructor="Ryan Tan"
         image={networking}
         cost={35}
-        description="Learn how computers network, while networking with networkers. 
+        description="Learn how computers network, while networking with networkers.
           During this course, you will learn the fundamentals of modern networking technologies and protocols.  "
       />
       <ClassCard
@@ -52,8 +64,8 @@ const Classes = () => {
         instructor="Kimberley Evans-Parker"
         image={money}
         cost={25}
-        description="Do you want your coding to convert into currency?  
-          Learn how programming can earn you money. 
+        description="Do you want your coding to convert into currency?
+          Learn how programming can earn you money.
           Whether through corporate coding, high frequency trading or selling your code for cash, you will learn the way to the dollar here!"
       />
       <ClassCard
@@ -61,7 +73,7 @@ const Classes = () => {
         instructor="Hassaan Mirza"
         image={purpleComputer}
         cost={27.5}
-        description="Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. 
+        description="Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.
           Many think it is the best way to make progress towards human-level AI."
       />
       <ClassCard
@@ -69,7 +81,7 @@ const Classes = () => {
         instructor="Ryan Tan"
         image={neuralNetworks}
         cost={30}
-        description="Deep learning engineers are highly sought after, and mastering deep learning will give you numerous new career opportunities. 
+        description="Deep learning engineers are highly sought after, and mastering deep learning will give you numerous new career opportunities.
           This course will teach you how to to build, train and apply deep neural networks."
       />
       <ClassCard
@@ -77,19 +89,19 @@ const Classes = () => {
         instructor="Hassaan Mirza"
         image={ICT}
         cost={25}
-        description="Do you want to learn how to describe hardware? 
-          Want to be able to perform cool memory and interupt based projects on a programable logic device? 
+        description="Do you want to learn how to describe hardware?
+          Want to be able to perform cool memory and interupt based projects on a programable logic device?
           Learning how to use FPGAs is the way forward for you!"
       />
       <ClassCard
         name="Start Up"
-        instructor="Terrence Qu"
+        instructor="Terence Qu"
         image={idea}
         cost={25}
-        description="Learn how to create your own start up!  
+        description="Learn how to create your own start up!
           In a world where jobs are scarce, learn how to create your own!"
       />
-    </div>
+    </>
   );
 };
 

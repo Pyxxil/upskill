@@ -1,10 +1,9 @@
 import React from "react";
-
-import Stars from "./Stars";
 import StarRatingComponent from "react-star-rating-component";
 
-import "./card.css";
 import { Link } from "react-router-dom";
+
+import "./card.css";
 
 interface InstructorCardProps {
   name: String;
@@ -15,25 +14,35 @@ interface InstructorCardProps {
 
 export const InstructorCard = (props: InstructorCardProps) => {
   return (
-    <Link
-      to={`/instructor/${props.name}`}
-      className="card content pure-u-6-24"
-      onClick={() => null}
-    >
-      <div className="card-image">
-        <img src={props.image} />
-      </div>
-      <div className="card-content">
-        <h1>{props.name}</h1>
-        {/* <Stars value={props.rating} /> */}
-        <StarRatingComponent
-          name={"rating"}
-          value={props.rating}
-          editing={false}
-        />
-        <p>{props.description}</p>
-      </div>
-    </Link>
+    <div className="card pure-u-7-24">
+      <Link to={`/instructor/${props.name}`}>
+        <div className="card-image">
+          <img src={props.image} alt="card" />
+        </div>
+        <h1
+          style={{
+            textAlign: "center",
+            color: "var(--background-colour)",
+          }}
+        >
+          {props.name}
+        </h1>
+        <div
+          style={{
+            textAlign: "center",
+          }}
+        >
+          <StarRatingComponent
+            name={"rating"}
+            value={props.rating}
+            editing={false}
+          />
+        </div>
+        <div className="card-content">
+          <p>{props.description}</p>
+        </div>
+      </Link>
+    </div>
   );
 };
 
@@ -47,11 +56,11 @@ interface ClassCardProps {
 
 export const ClassCard = (props: ClassCardProps) => {
   return (
-    <Link to={`/class/${props.name}`} className="card content pure-u-6-24">
+    <Link to={`/class/${props.name}`} className="card pure-u-7-24">
       <div className="card-image">
-        <img src={props.image} />
+        <img src={props.image} alt="card" />
       </div>
-      <h1 className="card-title pure-u-6-24">{props.name}</h1>
+      <h1 className="card-title">{props.name}</h1>
       <div className="card-content">
         <p>{props.instructor}</p>
         <p>${props.cost}</p>
@@ -71,11 +80,11 @@ interface RewardCardProps {
 
 export const RewardCard = (props: RewardCardProps) => {
   return (
-    <Link to='#' className="card content pure-u-6-24">
+    <Link to="#" className="card pure-u-7-24">
       <div className="card-image">
-        <img src={props.image} />
+        <img src={props.image} alt="card" />
       </div>
-      <h1 className="card-title pure-u-6-24">{props.name}</h1>
+      <h1 className="card-title">{props.name}</h1>
       <div className="card-content">
         <p>{props.cost}&#128176;</p>
         <p>{props.address}</p>
@@ -84,7 +93,7 @@ export const RewardCard = (props: RewardCardProps) => {
     </Link>
   );
 };
-        
+
 interface ChallengeCardProps {
   name: String;
   image: string;
@@ -94,18 +103,18 @@ interface ChallengeCardProps {
 
 export const ChallengeCard = (props: ChallengeCardProps) => {
   return (
-    <Link to={`/company-challenge/${props.name}`} className="card content pure-u-6-24">
+    <Link to={`/company-challenge/${props.name}`} className="card pure-u-7-24">
       <div className="card-image">
-        <img src={props.image} />
+        <img src={props.image} alt="card" />
       </div>
-      <h1 className="card-title pure-u-6-24">{props.name}</h1>
+      <h1 className="card-title">{props.name}</h1>
       <div className="card-content">
         <p>{props.instructor}</p>
         <p>{props.description}</p>
       </div>
     </Link>
-  )
-}
+  );
+};
 
 interface BadgeCardProps {
   name: String;
@@ -127,5 +136,5 @@ export const BadgeCard = (props: BadgeCardProps) => {
         <p></p>
       </div>
     </Link>
-  )
-}
+  );
+};

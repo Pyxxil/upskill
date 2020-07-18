@@ -16,13 +16,26 @@ type RewardsProps = OwnProps;
 
 const Rewards = (props: RewardsProps) => {
   return (
-    <div>
-      <h1>Rewards</h1>
-      <p>Hi {props.user}, you currently have 5&#128176;</p>
-      <p>
-        Choose to donate to a charity or get a voucher you can spend at a local
-        business!
-      </p>
+    <>
+      <div className="content">
+        <h1
+          style={{
+            margin: "1em",
+            padding: "1em 2em",
+            textAlign: "center",
+            backgroundColor: "var(--text)",
+            color: "var(--background-colour)",
+          }}
+        >
+          Available Rewards
+        </h1>
+
+        <p>Hi {props.user}, you currently have 5&#128176;</p>
+        <p>
+          Choose to donate to a charity or get a voucher you can spend at a
+          local business!
+        </p>
+      </div>
       <h2>Charities</h2>
       <RewardCard
         name="COVID-19 Fund"
@@ -67,7 +80,7 @@ const Rewards = (props: RewardsProps) => {
         address="Online"
         description="We'll introduce to a local career coach, who will provide you with a free 30 minute zoom coaching session!"
       ></RewardCard>
-    </div>
+    </>
   );
 };
 
