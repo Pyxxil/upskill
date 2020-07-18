@@ -17,9 +17,12 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Rewards from "./pages/Rewards";
+import CompanyChallenges from './pages/CompanyChallenges';
+import CompanyChallenge from './pages/CompanyChallenge';
 
 import "./App.css";
 import { fetchCurrentUser } from "./utils/userRequests";
+
 
 export type User = {
   email: string;
@@ -79,6 +82,11 @@ const App = () => {
               <li className="pure-menu-item">
                 <Link to="/rewards" className="pure-menu-link">
                   Rewards
+                </Link>
+              </li>
+              <li className="pure-menu-item">
+                <Link to="/company-challenges" className="pure-menu-link">
+                  Company Challenges
                 </Link>
               </li>
             </ul>
@@ -169,7 +177,21 @@ const App = () => {
         </Route>
 
         {/* This is where you can view all possible rewards */}
-        <Route path="/rewards" component={Rewards} />
+        <Route path="/rewards" render={() => <Rewards user={appState.user?.name || ""}/>} />
+
+        {/* This is where you can view company challenges */}
+        <Route path="/company-challenges" component={CompanyChallenges} />
+
+        {/* View specific company challenge */}
+        <Route path="/company-challenge/:id" render={(props) => (
+          <CompanyChallenge
+            challengeId={props.match.params.id} 
+            name="Super Hard Challenge"
+            company="DEVS"
+            description="For this challenge, you need to come up with an idea in 48 hours and implement it."
+            />
+        )} 
+        />
       </Switch>
     </Router>
   );

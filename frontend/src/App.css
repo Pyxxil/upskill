@@ -31,6 +31,10 @@ body {
   -moz-transition: height 0.5s;
   -ms-transition: height 0.5s;
   transition: height 0.5s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 .custom-wrapper .pure-menu-heading,
@@ -149,14 +153,6 @@ body {
   color: var(--secondary);
   font-style: italic;
   text-align: center;
-}
-
-h1 {
-  /* text-align: center;
-  padding-bottom: 1em;
-  border-bottom: 2px solid var(--text);
-  margin-bottom: 1em;
-  color: var(--secondary-text); */
 }
 
 article h2,
