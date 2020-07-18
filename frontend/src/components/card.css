@@ -1,22 +1,24 @@
 .card {
+  height: 25em;
   color: var(--background-colour);
   background-color: var(--text);
-  height: 20em;
-  width: 28%;
-  margin-right: 2em;
-  margin-bottom: 2em;
-  padding: 0 0 0em !important;
+  margin: 1em 2.12em;
+  padding: 0 0 2.5em !important;
   -webkit-box-shadow: 0.5em 0.5em 5px 0px var(--extra);
   -moz-box-shadow: 0.5em 0.5em 5px 0px var(--extra);
   box-shadow: 0.5em 0.5em 5px 0px var(--extra);
   text-decoration: none;
   overflow: hidden;
+  border: 1px solid var(--text);
+}
+
+.card a:link {
+  text-decoration: none !important;
 }
 
 .card:hover {
-  border: none;
   cursor: pointer;
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 .card-image {
@@ -40,12 +42,15 @@
   margin: -1.5em 0 0 0 !important;
   width: 100%;
   border: none !important;
+  text-align: center;
 }
 
 .card-content {
-  margin: 0em;
-  padding: 0 0.25em;
+  margin: 0.25em;
+  padding: 1.5em 1em;
   color: var(--background-colour);
+  text-decoration: none !important;
+  text-align: left;
 }
 
 .card-content h1 {
@@ -54,4 +59,9 @@
 
 .card-content p {
   margin: 0;
+}
+
+.dv-star-rating input {
+  width: 100%;
+  margin: 0 auto;
 }

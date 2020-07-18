@@ -2,16 +2,18 @@
   background-image: url("../assets/jumbotron.jpg");
   background-size: cover;
   min-height: 30em;
+  justify-content: center;
+  text-align: center;
 }
 
 .jumbotron h1 {
-  font-size: 3em;
-  line-height: 1em;
-  color: #ffffff;
-  margin: 0em 0em;
-  padding: 5em 5em;
+  font-size: 4em;
+  line-height: 1;
+  margin: 0em;
+  padding: 4em;
   border-bottom: none;
-  text-shadow: 2px 2px #000000;
+  color: var(--background-colour);
+  text-shadow: 4px 4px var(--text);
 }
 
 .featured-container {
@@ -22,8 +24,14 @@
 .featured-container h2 {
   display: inline;
   line-height: 4em;
-  margin-left: 2.6em;
-  color: #000000;
+  margin: 0 0 0 2.6em !important;
+  padding: 0 !important;
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+.card-container > .card {
+  margin: 0.5em;
 }
 
 .card-container {
@@ -31,44 +39,27 @@
 }
 
 .size {
-  margin-top: 10em;
-  width: 2.5em;
+  margin-top: 12.5em;
   border-radius: 50px;
   opacity: 0.8;
-  margin-right: -20px;
 }
+
 .size:hover {
   transform: scale(1.1, 1.1);
   cursor: pointer;
   opacity: 1;
 }
-.size-left {
-  margin-right: 20px;
-  margin-left: -0px;
-}
 
-.featured-instructors {
-  background-color: aqua;
-  width: 100%;
-}
-
+.featured-instructors,
 .featured-classes {
-  background-color: blue;
   width: 100%;
 }
 
-.button {
-  background-color: #4caf50; /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 0.5em 0.5em;
+.featured-container button {
   float: right;
-  margin-top: 2em;
   margin-right: 3.5em;
+  color: var(--background-colour);
+  background-color: var(--text);
 }
 
 .button:hover {
