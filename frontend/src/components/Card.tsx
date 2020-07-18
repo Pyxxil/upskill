@@ -58,3 +58,27 @@ export const ClassCard = (props: ClassCardProps) => {
     </Link>
   );
 };
+
+interface RewardCardProps {
+  name: String;
+  image: string;
+  cost: number;
+  address: string;
+  description: String;
+}
+
+export const RewardCard = (props: RewardCardProps) => {
+  return (
+    <Link to='#' className="card content pure-u-6-24">
+      <div className="card-image">
+        <img src={props.image} />
+      </div>
+      <h1 className="card-title pure-u-6-24">{props.name}</h1>
+      <div className="card-content">
+        <p>{props.cost}&#128176;</p>
+        <p>{props.address}</p>
+        <p>{props.description}</p>
+      </div>
+    </Link>
+  );
+};
