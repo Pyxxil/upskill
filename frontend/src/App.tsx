@@ -8,6 +8,7 @@ import Instructor from "./pages/Instructor";
 import Instructors from "./pages/Instructors";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Rewards from "./pages/Rewards";
 
@@ -59,6 +60,11 @@ const App = () => {
           <div className="pure-menu pure-menu-horizontal custom-menu-3">
             <ul className="pure-menu-list">
               <li className="pure-menu-item">
+                <Link to="/register" className="pure-menu-link">
+                  Register
+                </Link>
+              </li>
+              <li className="pure-menu-item">
                 <Link to="/login" className="pure-menu-link">
                   Login
                 </Link>
@@ -72,6 +78,9 @@ const App = () => {
         <Route exact path="/" component={Landing} />
         {/* The login page */}
         <Route path="/login" component={Login} />
+
+        {/* The register page */}
+        <Route path="/register" component={Register}/>
 
         {/* The page for each of the classes we offer */}
         <Route path="/classes" component={Classes} />
