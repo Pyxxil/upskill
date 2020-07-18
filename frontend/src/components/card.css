@@ -22,7 +22,7 @@
 }
 
 .card-image {
-  background-color: var(--secondary);
+  background-color: var(--background-colour);
   height: 50%;
   width: 100%;
   padding: 0 !important;

@@ -3,7 +3,7 @@ import React from "react";
 import { InstructorCard } from "../components/Card";
 
 import RyanTan from "../assets/profiles/Ryan Tan.png";
-import JoshHill from "../assets/profiles/Josh Hill.jpg";
+import JoshHill from "../assets/profiles/Josh Hill.png";
 import KimberleyEvansParker from "../assets/profiles/Kimberley Evans-Parker.jpg";
 import SunnyFeng from "../assets/profiles/Sunny Feng.jpg";
 import HassaanMirza from "../assets/profiles/Hassaan Mirza.jpg";

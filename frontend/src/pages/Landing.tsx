@@ -4,7 +4,7 @@ import { Jumbotron } from "reactstrap";
 import { InstructorCard, ClassCard } from "../components/Card";
 import { Link } from "react-router-dom";
 
-import JoshHill from "../assets/profiles/Josh Hill.jpg";
+import JoshHill from "../assets/profiles/Josh Hill.png";
 import KimberleyEvansParker from "../assets/profiles/Kimberley Evans-Parker.jpg";
 import HassaanMirza from "../assets/profiles/Hassaan Mirza.jpg";
 import AI from "../assets/classes/AI.jpeg";
