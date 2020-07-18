@@ -101,7 +101,7 @@ const Instructor = (props: InstructorProps) => {
         description="Got first place out of everyone!"
       />
       <h2>Endorsements</h2>
-      <p>"One of my best students." - David Tenant 19/07/2020</p>
+      <p>"One of my best students." - David Tennant 19/07/2020</p>
       <p>"Completely unbelievable! Once of the best teachers I've seen, explains things really well" - Terence Qu</p>
     </div>
   );
