@@ -12,30 +12,6 @@ body {
   font-size: 16px;
   line-height: 1.5em;
   color: var(--text);
-  /* background: linear-gradient(
-      135deg,
-      var(--secondary-background-colour) 21px,
-      var(--background-colour) 22px,
-      var(--background-colour) 24px,
-      transparent 24px,
-      transparent 67px,
-      var(--background-colour) 67px,
-      var(--background-colour) 69px,
-      transparent 69px
-    ),
-    linear-gradient(
-        225deg,
-        var(--secondary-background-colour) 21px,
-        var(--background-colour) 22px,
-        var(--background-colour) 24px,
-        transparent 24px,
-        transparent 67px,
-        var(--background-colour) 67px,
-        var(--background-colour) 69px,
-        transparent 69px
-      )
-      0 64px;
-  background-color: var(--secondary-background-colour); */
   background-size: 64px 128px;
 }
 
@@ -51,6 +27,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 10;
 }
 
 .custom-wrapper .pure-menu-heading,
@@ -169,14 +146,6 @@ body {
   color: var(--secondary);
   font-style: italic;
   text-align: center;
-}
-
-h1 {
-  /* text-align: center;
-  padding-bottom: 1em;
-  border-bottom: 2px solid var(--text);
-  margin-bottom: 1em;
-  color: var(--secondary-text); */
 }
 
 article h2,
