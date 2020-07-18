@@ -5,7 +5,12 @@ import { ClassCard } from "../components/Card";
 
 import StarRatingComponent from "react-star-rating-component";
 
-import testImage from "../assets/test.webp";
+import binary from "../assets/classes/binary.jpg";
+import blockchain from "../assets/classes/Blockchain.jpeg";
+import networking from "../assets/classes/networking.jpg";
+import purpleComputer from "../assets/classes/purple comp.jpg";
+import idea from "../assets/classes/idea.jpg";
+import neuralNetworks from "../assets/classes/rainbow brain.jpeg";
 
 interface OwnProps {
   instructorId: number;
@@ -42,41 +47,52 @@ const Instructor = (props: InstructorProps) => {
       })}
       <h2>Available Classes</h2>
       <ClassCard
-        name="Physics"
-        image={testImage}
-        cost={20}
-        description="Come and learn Physics!"
-      />
-      <ClassCard
         name="Blockchain"
-        image={testImage}
-        cost={30}
-        description="Come and learn blockchain!"
+        instructor="Ryan Tan"
+        image={blockchain}
+        cost={40}
+        description="This specialization introduces blockchain, a revolutionary technology that enables peer-to-peer transfer of digital assets without any intermediaries, and is predicted to be just as impactful as the Internet. "
       />
       <ClassCard
-        name="Start up"
-        image={testImage}
-        cost={25}
-        description="Come and learn how to make a great start up!"
+        name="Networking"
+        instructor="Ryan Tan"
+        image={networking}
+        cost={35}
+        description="Learn how computers network, while networking with networkers. 
+          During this course, you will learn the fundamentals of modern networking technologies and protocols.  "
+      />
+      <ClassCard
+        name="Neural Networks"
+        instructor="Ryan Tan"
+        image={neuralNetworks}
+        cost={30}
+        description="Deep learning engineers are highly sought after, and mastering deep learning will give you numerous new career opportunities. 
+          This course will teach you how to to build, train and apply deep neural networks."
       />
       <h2>Classes I've taken</h2>
       <ClassCard
-        name="Linguistics"
-        image={testImage}
-        cost={40}
-        description="Learn a new language!"
-      />
-      <ClassCard
-        name="4 Dimensions"
-        image={testImage}
-        cost={30}
-        description="Come and learn how bigger on the inside is possible with a fourth dimension!"
-      />
-      <ClassCard
-        name="Parallel Universe"
-        image={testImage}
+        name="Binary"
+        instructor="Josh Hill"
+        image={binary}
         cost={25}
-        description="Do they exist? Discuss theories on how travelling accross parallel universes is possible."
+        description="An introduction to binary and how it is used in a computer. 
+          You'll learn how there are 10 kinds of people in this world; those who understand binary, those who don't, and those who fall prey to off by one errors."
+      />
+      <ClassCard
+        name="Start Up"
+        instructor="Terrence Qu"
+        image={idea}
+        cost={25}
+        description="Learn how to create your own start up!  
+          In a world where jobs are scarce, learn how to create your own!"
+      />
+      <ClassCard
+        name="Machine Learning"
+        instructor="Hassaan Mirza"
+        image={purpleComputer}
+        cost={27.5}
+        description="Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. 
+          Many think it is the best way to make progress towards human-level AI."
       />
       <p>You're viewing the page for instructor {props.instructorId}</p>
     </div>

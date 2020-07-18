@@ -33,15 +33,16 @@
 
 .card-title {
   position: relative;
-  background-color: rgba(100, 100, 100, 0.5);
-  padding: 0.25em 0 !important;
+  background-color: rgba(206, 206, 206, 0.7);
+  padding: 0.25em 0.25em !important;
   margin: -1.5em 0 0 0 !important;
   width: 100%;
   border: none !important;
 }
 
 .card-content {
-  margin: 0.25em;
+  margin: 0em;
+  padding: 0 0.25em;
   color: var(--background-colour);
 }
 
