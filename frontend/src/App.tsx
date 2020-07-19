@@ -13,7 +13,7 @@ import Profile from "./pages/Profile";
 import Rewards from "./pages/Rewards";
 import CompanyChallenges from "./pages/CompanyChallenges";
 import CompanyChallenge from "./pages/CompanyChallenge";
-import logo from "./assets/logo.PNG";
+import logo from "./assets/logo.png";
 
 import "./App.css";
 import { fetchCurrentUser } from "./utils/userRequests";
