@@ -49,6 +49,7 @@ export const InstructorCard = (props: InstructorCardProps) => {
 interface ClassCardProps {
   name: String;
   instructor: String;
+  time: String;
   image: string;
   cost: number;
   description: String;
@@ -63,6 +64,7 @@ export const ClassCard = (props: ClassCardProps) => {
       <h1 className="card-title">{props.name}</h1>
       <div className="card-content">
         <p>{props.instructor}</p>
+        <p>{props.time}</p>
         <p>${props.cost}</p>
         <p>{props.description}</p>
       </div>
