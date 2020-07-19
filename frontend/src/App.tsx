@@ -133,9 +133,9 @@ const App = () => {
           render={(props) => (
             <Class
               name={props.match.params.id}
-              instructor="John Smith"
-              price={20}
-              description="This class introduces the basics of Blockchain"
+              instructor="Ryan Tan"
+              price={40}
+              description="This specialization introduces blockchain, a revolutionary technology that enables peer-to-peer transfer of digital assets without any intermediaries, and is predicted to be just as impactful as the Internet. "
             />
           )}
         />
