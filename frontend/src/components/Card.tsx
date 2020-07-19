@@ -86,7 +86,7 @@ export const RewardCard = (props: RewardCardProps) => {
       </div>
       <h1 className="card-title">{props.name}</h1>
       <div className="card-content">
-        <p>{props.cost}&#128176;</p>
+        {props.cost ? <p>{props.cost}&#128176;</p> : <></>}
         <p>{props.address}</p>
         <p>{props.description}</p>
       </div>

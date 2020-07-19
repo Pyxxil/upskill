@@ -30,33 +30,36 @@ const Rewards = (props: RewardsProps) => {
           Available Rewards
         </h1>
 
-        <p>Hi {props.user}, you currently have 5&#128176;</p>
+        <p>Hi {props.user}, you currently have 5&#128176;!</p>
         <p>
           Choose to donate to a charity or get a voucher you can spend at a
           local business!
+        </p>
+        <p>
+          Get more &#128176; by attending classes and completing challenges!
         </p>
       </div>
       <h2>Charities</h2>
       <RewardCard
         name="COVID-19 Fund"
         image={who}
-        cost={20}
+        cost={0}
         address=""
-        description="The World Health Organization is leading and coordinating the global effort, supporting countries to prevent, detect, and respond to the pandemic. By choosing this we will make a donation of $15 to COVID-Solidarity Response Fund for WHO"
+        description="The World Health Organization is leading and coordinating the global effort, supporting countries to prevent, detect, and respond to the pandemic. By choosing this we will make a donation of $1 per &#128176; to COVID-Solidarity Response Fund for WHO"
       ></RewardCard>
       <RewardCard
         name="SPCA"
         image={spca}
-        cost={20}
+        cost={0}
         address=""
-        description="Together with our communities, SPCA has been protecting New Zealand’s animals for over 140 years – animals who are sick, injured, neglected, abused or simply abandoned. By choosing this we will make a donation of $15 to SPCA"
+        description="Together with our communities, SPCA has been protecting New Zealand’s animals for over 140 years – animals who are sick, injured, neglected, abused or simply abandoned. By choosing this we will make a donation of $1 per &#128176; to SPCA"
       ></RewardCard>
       <RewardCard
         name="UNICEF"
         image={unicef}
-        cost={20}
+        cost={0}
         address=""
-        description="When disaster strikes, UNICEF is there to save and protect children – no matter the circumstance. And right now, as the world battles with the COVID-19 pandemic, our life-saving work for children has never been more critical. By choosing this we will make a donation of $15 to UNICEF"
+        description="When disaster strikes, UNICEF is there to save and protect children – no matter the circumstance. And right now, as the world battles with the COVID-19 pandemic, our life-saving work for children has never been more critical. By choosing this we will make a donation of $1 per &#128176; to UNICEF"
       ></RewardCard>
       <h2>Local Rewards</h2>
       <RewardCard
