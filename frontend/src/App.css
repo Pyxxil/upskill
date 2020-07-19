@@ -27,6 +27,13 @@ body {
   background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
 }
 
+.logo {
+  float: left;
+  height: 2.5em;
+  margin-left: 1em;
+  margin-right: 0.2em;
+}
+
 .content-container {
   width: 90vw;
   max-width: 1100px;
@@ -198,4 +205,10 @@ article h4 {
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
   border-radius: 0.2em;
+}
+
+.class-image {
+  float: left;
+  width: 14.5em;
+  padding-right: 2em;
 }

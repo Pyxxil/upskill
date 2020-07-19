@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 import Rewards from "./pages/Rewards";
 import CompanyChallenges from "./pages/CompanyChallenges";
 import CompanyChallenge from "./pages/CompanyChallenge";
+import logo from "./assets/logo.png";
 
 import "./App.css";
 import { fetchCurrentUser } from "./utils/userRequests";
@@ -44,8 +45,9 @@ const App = () => {
       <div className="custom-wrapper pure-g" id="menu">
         <div className="pure-u-1 pure-u-md-6-24">
           <div className="pure-menu">
+            <img src={logo} alt="Up" className="logo" />
             <Link to="/" className="pure-menu-heading custom-brand">
-              Upskill
+              skill
             </Link>
             <a
               href="/#"
