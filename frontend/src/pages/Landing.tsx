@@ -78,6 +78,7 @@ const Landing = () => {
                 name="Blockchain"
                 instructor="Ryan Tan"
                 image={blockchain}
+                time="1pm-2pm"
                 cost={40}
                 description="This specialization introduces blockchain, a revolutionary technology that enables peer-to-peer transfer of digital assets without any intermediaries, and is predicted to be just as impactful as the Internet. "
               />
@@ -85,6 +86,7 @@ const Landing = () => {
                 name="Binary"
                 instructor="Josh Hill"
                 image={binary}
+                time="3pm-4pm"
                 cost={25}
                 description="An introduction to binary and how it is used in a computer.
                   You'll learn how there are 10 kinds of people in this world; those who understand binary, those who don't, and those who fall prey to off by one errors."
@@ -93,6 +95,7 @@ const Landing = () => {
                 name="Artificial Intelligence"
                 instructor="Sunny Feng"
                 image={AI}
+                time="1pm-2pm"
                 cost={30}
                 description="Learn the powers and dangers of AI and where it can take you.
                   Additionally, this classcovers opportunities for AI, as well as ethical concerns surounding AI.  "
