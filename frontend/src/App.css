@@ -206,3 +206,9 @@ article h4 {
   -webkit-border-radius: 0.2em;
   border-radius: 0.2em;
 }
+
+.class-image {
+  float: left;
+  width: 14.5em;
+  padding-right: 2em;
+}
