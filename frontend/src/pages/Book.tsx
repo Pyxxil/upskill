@@ -17,7 +17,7 @@ const Book = (props: BookProps) => {
   if (booked) {
     return (
       <div className="content centered">
-        You have now successfully booked {props.classId} for {new Date(date).toDateString()}!
+        You have now successfully booked {props.classId} for {new Date(date).toDateString()} at 1-2pm!
       </div>
     );
   }
@@ -31,7 +31,7 @@ const Book = (props: BookProps) => {
           onChange={(d) => setDate(Array.isArray(d) ? d[0] : d)}
           tileContent={(d) =>
             d.date.getUTCDay() === 1 || d.date.getUTCDay() === 3 ? (
-              <p style={{ color: "#65AE5B" }}>Available</p>
+              <p style={{ color: "#65AE5B" }}>Available (1-2pm)</p>
             ) : (
               <p>N/A</p>
             )
