@@ -2,6 +2,16 @@
   width: 100%;
 }
 
+.react-calendar__tile--now {
+  background-color: #465362 !important;
+  color: var(--background-color) !important;
+}
+
+.react-calendar__tile--active {
+  background-color: var(--text) !important;
+  color: var(--background-color) !important;
+}
+
 button {
   margin: 2em 2em 1em;
   width: 10em;

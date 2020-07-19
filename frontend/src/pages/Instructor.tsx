@@ -48,6 +48,7 @@ const Instructor = (props: InstructorProps) => {
           name="Blockchain"
           instructor="Ryan Tan"
           image={blockchain}
+          time="1pm-2pm"
           cost={40}
           description="This specialization introduces blockchain, a revolutionary technology that enables peer-to-peer transfer of digital assets without any intermediaries, and is predicted to be just as impactful as the Internet. "
         />
@@ -55,6 +56,7 @@ const Instructor = (props: InstructorProps) => {
           name="Networking"
           instructor="Ryan Tan"
           image={networking}
+          time="2pm-3pm"
           cost={35}
           description="Learn how computers network, while networking with networkers.
           During this course, you will learn the fundamentals of modern networking technologies and protocols.  "
@@ -63,6 +65,7 @@ const Instructor = (props: InstructorProps) => {
           name="Neural Networks"
           instructor="Ryan Tan"
           image={neuralNetworks}
+          time="1pm-2pm"
           cost={30}
           description="Deep learning engineers are highly sought after, and mastering deep learning will give you numerous new career opportunities.
           This course will teach you how to to build, train and apply deep neural networks."
@@ -72,6 +75,7 @@ const Instructor = (props: InstructorProps) => {
           name="Binary"
           instructor="Josh Hill"
           image={binary}
+          time="3pm-4pm"
           cost={25}
           description="An introduction to binary and how it is used in a computer.
           You'll learn how there are 10 kinds of people in this world; those who understand binary, those who don't, and those who fall prey to off by one errors."
@@ -80,6 +84,7 @@ const Instructor = (props: InstructorProps) => {
           name="Start Up"
           instructor="Terence Qu"
           image={idea}
+          time="4pm-5pm"
           cost={25}
           description="Learn how to create your own start up!
           In a world where jobs are scarce, learn how to create your own!"
@@ -88,6 +93,7 @@ const Instructor = (props: InstructorProps) => {
           name="Machine Learning"
           instructor="Hassaan Mirza"
           image={purpleComputer}
+          time="10am-11am"
           cost={27.5}
           description="Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.
           Many think it is the best way to make progress towards human-level AI."

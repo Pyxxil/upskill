@@ -1,3 +1,7 @@
+.display-3 {
+    font-size: 80px !important;
+}
+
 .jumbotron {
   background-image: url("../assets/jumbotron.jpg");
   background-size: cover;
@@ -25,7 +29,6 @@
   display: inline;
   line-height: 4em;
   margin: 0 0 0 2.6em !important;
-  padding: 0 !important;
   background-color: inherit !important;
   color: inherit !important;
 }

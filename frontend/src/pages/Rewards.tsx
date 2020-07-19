@@ -21,7 +21,6 @@ const Rewards = (props: RewardsProps) => {
         <h1
           style={{
             margin: "1em",
-            padding: "1em 2em",
             textAlign: "center",
             backgroundColor: "var(--text)",
             color: "var(--background-colour)",
