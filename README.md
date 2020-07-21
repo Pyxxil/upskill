@@ -39,7 +39,7 @@ Once this is done, change directory back to the main folder consisting of the fr
 [Kimberley Evans-Parker](https://www.linkedin.com/in/kimberley-evans-parker/)  
 [Josh Hill](https://www.linkedin.com/in/josh-hill-b655131a1/)  
 [Mohammad Hassaan Mirza](https://www.linkedin.com/in/mohammad-mirza/)  
-[Terence Qu](https://github.com/Terenco12345)
+[Terence Qu](https://github.com/Terenco12345)  
 [Ryan Tan](https://www.linkedin.com/in/rtan18/)  
 
 ![Final Slide](./readmeImages/finalSlideDEVS.PNG)
