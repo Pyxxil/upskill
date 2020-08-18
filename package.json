@@ -17,5 +17,8 @@
   },
   "devDependencies": {
     "lerna": "^3.22.1"
+  },
+  "resolutions": {
+    "dot-prop": "^4.2.1"
   }
 }
