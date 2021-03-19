@@ -144,7 +144,7 @@ const App = () => {
         {/* The page where you can go to to book a class */}
         <Route
           path="/book/:id"
-          render={(props) => <Book classId={props.match.params.id} />}
+          render={(props) => <Book classId={parseInt(props.match.params.id)} />}
         />
 
         {/* The page for each of the instructors */}
@@ -154,7 +154,7 @@ const App = () => {
           path="/instructor/:id"
           render={(props) => (
             <Instructor
-              instructorId={props.match.params.id}
+              instructorId={parseInt(props.match.params.id)}
               name="Ryan Tan"
               stars={4}
               description="As a newcomer in computer science and programming, I try to learn about the domain as much as I can to make up for lost time. The following quote inspired me to learn, grow and fail quickly - 'It's hard to achieve greatness by constantly looking back. It's constant forward hyper momentum' - Robert Herjavec.
